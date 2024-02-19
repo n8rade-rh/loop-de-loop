@@ -1,0 +1,427 @@
+- name: Playbook Reproducer
+  hosts: all
+  gather_facts: false
+
+  vars:
+  
+    # $ python
+    # Python 3.11.7 (main, Dec 18 2023, 00:00:00) [GCC 13.2.1 20231011 (Red Hat 13.2.1-4)] on linux
+    # Type "help", "copyright", "credits" or "license" for more information.
+    # >>> print(['- {}'.format(i) for i in 'abcdefghijklmnopqrstuvwxyz'])
+    # ['- a', '- b', '- c', '- d', '- e', '- f', '- g', '- h', '- i', '- j', '- k', '- l', '- m', '- n', '- o', '- p', '- q', '- r', '- s', '- t', '- u', '- v', '- w', '- x', '- y', '- z']
+    # >>> for x in ['- {}'.format(i) for i in 'abcdefghijklmnopqrstuvwxyz']: print(x)
+
+    services:
+      - a
+      - b
+      - c
+      - d
+      - e
+      - f
+      - g
+      - h
+      - i
+      - j
+      - k
+      - l
+      - m
+      - nn
+      - o
+      - p
+      - q
+      - r
+      - s
+      - t
+      - u
+      - v
+      - w
+      - x
+      - yy
+      - z
+      - za
+      - zb
+      - zc
+      - zd
+      - ze
+      - zf
+      - zg
+
+
+    pools:
+      - name: a
+        var1: 1
+        var2: 2
+        var3: 3
+        var4: 4
+        var5: 5
+        var6: 6
+        var7: 7
+        var8: 8
+        var9: 9
+        var10: 10
+      - name: b
+        var1: 1
+        var2: 2
+        var3: 3
+        var4: 4
+        var5: 5
+        var6: 6
+        var7: 7
+        var8: 8
+        var9: 9
+        var10: 10     
+      - name: c
+        var1: 1
+        var2: 2
+        var3: 3
+        var4: 4
+        var5: 5
+        var6: 6
+        var7: 7
+        var8: 8
+        var9: 9
+        var10: 10   
+      - name: d
+        var1: 1
+        var2: 2
+        var3: 3
+        var4: 4
+        var5: 5
+        var6: 6
+        var7: 7
+        var8: 8
+        var9: 9
+        var10: 10    
+      - name: e
+        var1: 1
+        var2: 2
+        var3: 3
+        var4: 4
+        var5: 5
+        var6: 6
+        var7: 7
+        var8: 8
+        var9: 9
+        var10: 10     
+      - name: f
+        var1: 1
+        var2: 2
+        var3: 3
+        var4: 4
+        var5: 5
+        var6: 6
+        var7: 7
+        var8: 8
+        var9: 9
+        var10: 10 
+      - name: g
+        var1: 1
+        var2: 2
+        var3: 3
+        var4: 4
+        var5: 5
+        var6: 6
+        var7: 7
+        var8: 8
+        var9: 9
+        var10: 10    
+      - name: h
+        var1: 1
+        var2: 2
+        var3: 3
+        var4: 4
+        var5: 5
+        var6: 6
+        var7: 7
+        var8: 8
+        var9: 9
+        var10: 10  
+      - name: i
+        var1: 1
+        var2: 2
+        var3: 3
+        var4: 4
+        var5: 5
+        var6: 6
+        var7: 7
+        var8: 8
+        var9: 9
+        var10: 10   
+      - name: j
+        var1: 1
+        var2: 2
+        var3: 3
+        var4: 4
+        var5: 5
+        var6: 6
+        var7: 7
+        var8: 8
+        var9: 9
+        var10: 10   
+      - name: k
+        var1: 1
+        var2: 2
+        var3: 3
+        var4: 4
+        var5: 5
+        var6: 6
+        var7: 7
+        var8: 8
+        var9: 9
+        var10: 10    
+      - name: l
+        var1: 1
+        var2: 2
+        var3: 3
+        var4: 4
+        var5: 5
+        var6: 6
+        var7: 7
+        var8: 8
+        var9: 9
+        var10: 10    
+      - name: m
+        var1: 1
+        var2: 2
+        var3: 3
+        var4: 4
+        var5: 5
+        var6: 6
+        var7: 7
+        var8: 8
+        var9: 9
+        var10: 10   
+      - name: nn
+        var1: 1
+        var2: 2
+        var3: 3
+        var4: 4
+        var5: 5
+        var6: 6
+        var7: 7
+        var8: 8
+        var9: 9
+        var10: 10   
+      - name: o
+        var1: 1
+        var2: 2
+        var3: 3
+        var4: 4
+        var5: 5
+        var6: 6
+        var7: 7
+        var8: 8
+        var9: 9
+        var10: 10   
+      - name: p
+        var1: 1
+        var2: 2
+        var3: 3
+        var4: 4
+        var5: 5
+        var6: 6
+        var7: 7
+        var8: 8
+        var9: 9
+        var10: 10  
+      - name: q
+        var1: 1
+        var2: 2
+        var3: 3
+        var4: 4
+        var5: 5
+        var6: 6
+        var7: 7
+        var8: 8
+        var9: 9
+        var10: 10    
+      - name: r
+        var1: 1
+        var2: 2
+        var3: 3
+        var4: 4
+        var5: 5
+        var6: 6
+        var7: 7
+        var8: 8
+        var9: 9
+        var10: 10   
+      - name: s
+        var1: 1
+        var2: 2
+        var3: 3
+        var4: 4
+        var5: 5
+        var6: 6
+        var7: 7
+        var8: 8
+        var9: 9
+        var10: 10    
+      - name: t
+        var1: 1
+        var2: 2
+        var3: 3
+        var4: 4
+        var5: 5
+        var6: 6
+        var7: 7
+        var8: 8
+        var9: 9
+        var10: 10 
+      - name: u
+        var1: 1
+        var2: 2
+        var3: 3
+        var4: 4
+        var5: 5
+        var6: 6
+        var7: 7
+        var8: 8
+        var9: 9
+        var10: 10   
+      - name: v
+        var1: 1
+        var2: 2
+        var3: 3
+        var4: 4
+        var5: 5
+        var6: 6
+        var7: 7
+        var8: 8
+        var9: 9
+        var10: 10   
+      - name: w
+        var1: 1
+        var2: 2
+        var3: 3
+        var4: 4
+        var5: 5
+        var6: 6
+        var7: 7
+        var8: 8
+        var9: 9
+        var10: 10 
+      - name: x
+        var1: 1
+        var2: 2
+        var3: 3
+        var4: 4
+        var5: 5
+        var6: 6
+        var7: 7
+        var8: 8
+        var9: 9
+        var10: 10  
+      - name: yy
+        var1: 1
+        var2: 2
+        var3: 3
+        var4: 4
+        var5: 5
+        var6: 6
+        var7: 7
+        var8: 8
+        var9: 9
+        var10: 10   
+      - name: z
+        var1: 1
+        var2: 2
+        var3: 3
+        var4: 4
+        var5: 5
+        var6: 6
+        var7: 7
+        var8: 8
+        var9: 9
+        var10: 10
+      - name: za
+        var1: 1
+        var2: 2
+        var3: 3
+        var4: 4
+        var5: 5
+        var6: 6
+        var7: 7
+        var8: 8
+        var9: 9
+        var10: 10
+      - name: zb
+        var1: 1
+        var2: 2
+        var3: 3
+        var4: 4
+        var5: 5
+        var6: 6
+        var7: 7
+        var8: 8
+        var9: 9
+        var10: 10
+      - name: zc
+        var1: 1
+        var2: 2
+        var3: 3
+        var4: 4
+        var5: 5
+        var6: 6
+        var7: 7
+        var8: 8
+        var9: 9
+        var10: 10
+      - name: zd
+        var1: 1
+        var2: 2
+        var3: 3
+        var4: 4
+        var5: 5
+        var6: 6
+        var7: 7
+        var8: 8
+        var9: 9
+        var10: 10
+      - name: ze
+        var1: 1
+        var2: 2
+        var3: 3
+        var4: 4
+        var5: 5
+        var6: 6
+        var7: 7
+        var8: 8
+        var9: 9
+        var10: 10
+      - name: zf
+        var1: 1
+        var2: 2
+        var3: 3
+        var4: 4
+        var5: 5
+        var6: 6
+        var7: 7
+        var8: 8
+        var9: 9
+        var10: 10
+      - name: zg
+        var1: 1
+        var2: 2
+        var3: 3
+        var4: 4
+        var5: 5
+        var6: 6
+        var7: 7
+        var8: 8
+        var9: 9
+        var10: 10
+    
+    pools_pre: []
+
+  tasks:
+    - name: Loop set_fact
+      ansible.builtin.set_fact:
+        pools_pre: "{{ pools_pre + [ item[1] ] }}"
+      when: item[0] == item[1].name
+      with_nested:
+        - "{{ services }}"
+        - "{{ pools }}"
+      delegate_to: localhost
+
+    - debug: var=pools_pre
