@@ -1,5 +1,5 @@
 - name: Loop de loop testing
-  hosts: local
+  hosts: localhost
   tasks:
   
     - name: Debug Looped
